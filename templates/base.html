@@ -10,9 +10,27 @@
   {% endblock meta %}
 </head>
 
-<body>
-  {% block content %}
-  {% endblock content %}
-</body>
+
+
+<table>
+  <tr>
+  <th>Item Name</th>
+  <th>Item Price</th>
+  <th>Item Stock</th>
+  <th>Description</th>
+  <th>Rating</th>
+  <th>Item URL</th>
+  </tr>
+  {% for barang in list_katalog %}
+      <tr>
+          <th>{{barang.item_name}}</th>
+          <th>{{barang.item_price}}</th>
+          <th>{{barang.item_stock}}</th>
+          <th>{{barang.description}}</th>
+          <th>{{barang.rating}}</th>
+          <th>{{barang.item_url}}</th>
+      </tr>
+  {% endfor %}    
+</table>
 
 </html>
