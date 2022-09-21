@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 1,
+        "fields": {
+            "watched": "True",
+            "title": "Fall",
+            "rating": "6.4",
+            "release_date": "2022-08-12",
+            "review": "The plot twist (which is satisfying on a first watch) probably won't hit as hard in subsequent viewings, and it's not compelling enough to make me want to rewatch the movie with the knowledge of the twist to spot clues and details."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 2,
+        "fields": {
+            "watched": "True",
+            "title": "Tomodachi Game",
+            "rating": "7.5",
+            "release_date": "2022-04-05",
+            "review": "I started the anime and expected a trashy story about teenagers doing some games with little twists. But its way better. The first Episode is good but the real fun begins with episode number 2. The show is more evil than I expected and there are a lot of twists."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 3,
+        "fields": {
+            "watched": "True",
+            "title": "The Autopsy of Jane Doe",
+            "rating": "6.8",
+            "release_date": "2016-12-21",
+            "review": "The Autopsy of Jane Doe - Was a visual treat to enjoy. I think if you are a fan of well paced films you will enjoy this one. Although it's being treated as a horror film - Which is not a problem unless you generalize this as the overall genre for this movie - Its more of a Suspense Thriller/Drama/Horror. This is not something I feel needs to be clarified, but understood as the film envelops all three entities."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 4,
+        "fields": {
+            "watched": "False",
+            "title": "Mencuri Raden Saleh",
+            "rating": "8.2",
+            "release_date": "2022-08-25",
+            "review": "This movie is not exceptional by doing something new, but because they know how to make each part fun and enjoyable. As a heist movie, it manages to capture adventure, drama, romance, and mystery in one pack with great storyline that came up from a single premise."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 5,
+        "fields": {
+            "watched": "False",
+            "title": "Promare",
+            "rating": "7.0",
+            "release_date": "2019-05-24",
+            "review": "A solid movie. The plot leaves much to be desired, with a generic 'Fight the Powah' theme that's better suited with Gurren Lagann (and I'm not just saying that because Galo looks like Kamina, despite Studio Trigger claiming the looks are coincidental). Major events were predictable, particularly with the climax."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 6,
+        "fields": {
+            "watched": "True",
+            "title": "Hamilton",
+            "rating": "8.4",
+            "release_date": "2020-07-03",
+            "review": "I started watching this out of curiosity and to say I have seen it, being the cultural touchstone that it is. At first, I was a little detached, not liking the songs too much, and thinking I would probably just skip through to end in a minute. I couldn't stop watching and it really sucked me in."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 7,
+        "fields": {
+            "watched": "True",
+            "title": "The Good Place",
+            "rating": "8.2",
+            "release_date": "2016-09-19",
+            "review": "I love this show. It's a feel good comedy that's lighthearted and will make you laugh while still trying to get some good life lessons across. You also don't need to search to find the deeper meaning in the show, its made blatantly obvious, but its not heavy."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 8,
+        "fields": {
+            "watched": "True",
+            "title": "Jojo Rabbit",
+            "rating": "7.9",
+            "release_date": "2019-11-08",
+            "review": "Hot Fuzz is crammed full of excellent characters, ranging from the eccentric to the diabolical, and every one gets at least one laugh during the course of the movie and most of them get many more. I don't mean to suggest that this film is wall to wall gags; in fact it is far from it, instead it is just very clever and often very subtle humour that runs continuously throughout the film."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 9,
+        "fields": {
+            "watched": "True",
+            "title": "BlacKkKlansman",
+            "rating": "7.5",
+            "release_date": "2018-08-10",
+            "review": "There's just so much here, so many layers, all so well portrayed. Like many movies with a strong message, it does tend to champion one side and demonize the other but, in this case... Well, it's hard to make look real good."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 10,
+        "fields": {
+            "watched": "True",
+            "title": "Spirited Away",
+            "rating": "8.6",
+            "release_date": "2003-03-28",
+            "review": "It is a comely tale that express the creator's thoughts in some way, whilst shining as a attractive animation piece with so many details that you might have ignore if you were careless. It is a rich story and I can see the efforts creators put into it in many spots and frames."
+        }
+    }
+]
