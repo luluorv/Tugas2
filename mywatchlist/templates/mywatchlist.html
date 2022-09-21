@@ -9,6 +9,9 @@
 
   <h5>Student ID: </h5>
   <p>{{id}}</p>
+  
+  {% if watched_a_lot %} <h3>Selamat, kamu sudah banyak menonton!</h3>
+  {% else %} <h3>Wah, kamu masih sedikit menonton!</h3> {% endif %}
 
   <table>
     <tr>
@@ -21,7 +24,7 @@
     
     {% for things in list_watchlist %}
         <tr>
-            {%if things.watched%} <td>Watched</td> {%else%} <td>Haven't watched</td> {%endif%}
+            {% if things.watched %} <td>Watched</td> {% else %} <td>Haven't watched</td> {% endif %}
             <td>{{things.title}}</td>
             <td>{{things.rating}}</td>
             <td>{{things.release_date}}</td>
