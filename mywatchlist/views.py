@@ -11,7 +11,6 @@ def show_html(request):
     not_watched = WatchlistItem.objects.filter(watched = False).count()
     count = watched >= not_watched
 
-
     context = {
     'list_watchlist': watchlistitem,
     'nama': 'Clarissa Thea Aryanto',
