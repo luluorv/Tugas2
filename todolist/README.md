@@ -17,7 +17,7 @@ Setelah user menekan button `new task`, dia akan diredirect ke halaman `todolist
 * Membuat aplikasi baru `todolist` dengan menjalankan `python manage.py startapp todolist`
 * Tambahkan path todolist pada `urls.py` dalam `project_django` dan `todolist`
 * Membuat model pada `models.py` dengan atribut user, date, title, description
-* Implementasi register, login, dan logout pada `views.py`, serta fungsi-fungsi lainnya. Untuk fungsi `show_todolist` tambahkan `@login_required(login_url='/todolist/login/')` agar hnaya dapat diakses bila sudah login
+* Implementasi register, login, dan logout pada `views.py`, serta fungsi-fungsi lainnya. Untuk fungsi `show_todolist` tambahkan `@login_required(login_url='/todolist/login/')` agar hanya dapat diakses bila sudah login
 * Tambahkan berkas `html` untuk `todolist` dan `create_task` lalu membuat routing untuk mengaksesnya serta fungsinya
 
 ### Bonus
