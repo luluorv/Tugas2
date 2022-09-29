@@ -1,5 +1,7 @@
 # Tugas 3
 ### [Link Aplikasi Heroku](https://katalogluluorv.herokuapp.com/todolist/)
+dummy account: dummy, Hero
+password: pbp12345
 
 ### Kegunaan `{% csrf_token %}` pada elemen `<form>`
 Untuk mencegah terjadinya serangan Cross-Site Request Forgery (CSRF). Serangan CSRF memaksa user yang melakukan autentikasi untuk mengeksekusi actions yang tidak diinginkan pada web application. `{% csrf_token %}` akan mengenerate token di server saat merender page dan akan mencross-check token ini untuk request yang masuk. Bila request tidak memiliki token, maka tidak akan dieksekusi. Bila tag ini tidak ada, maka kita tidak bisa mengidentifikasi dan mencompare source dan target origin. Dengan `{% csrf_token %}`, kita dapat memastikan bahwa request tersebut legitimate.
