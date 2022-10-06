@@ -1,4 +1,4 @@
-# Tugas 3
+# Tugas 4
 ### [Link Aplikasi Heroku](https://katalogluluorv.herokuapp.com/todolist/)
 Account: dummy, Hero
 
@@ -25,3 +25,74 @@ Setelah user menekan button `new task`, dia akan diredirect ke halaman `todolist
 * Membuat fungsi `change_status` dan `delete_task` pada views.py
 * Dalam `todolist.html` buat if else statement untuk menyesuaikan teks dengan atribut `is_finished`. Tambahkan juga button `Change Status` untuk mengubah status dari task tersebut dan button `Delete Task` untuk menghapus sebuah task.
 * Tambahkan path untuk `change_status` dan `delete_task` dalam urls.py
+
+# Tugas 5
+### Perbedaan dari Inline, Internal, dan External CSS
+* Inline 
+  - Menambahkan atribut `style` pada setiap tag HTML
+  - Kelebihan:
+    * Mudah menambahkan rule CSS ke dalam HTML
+    * Tidak perlu membuat external style
+  - Kekurangan:
+    * Memakan banyak waktu untuk diimplmentasi
+    * Dapat memengaruhi besar website dan download time
+* Internal
+  - Menambahkan tag `<style>` dalam `<head>` pada HTML
+  - Kelebihan:
+    * Dapat meggunakan class dan id selector 
+    * Tidak perlu mengupload file lain karena hanya menambahkan kode pada HTML
+  - Kekurangan:
+    * Dapat menambah besarnya page dan loading time
+* External
+  - Menghubungkan HTML dengan file external `.css`
+  - Kelebihan:
+    * HTML lebih rapi dan terstruktur karena kode CSS ada pada file yang terpisah
+    * File `.css` dapat digunakan berulang kali
+  - Kekurangan:
+    * Pages hanya akan terender dengan benar bila external CSS telah diload
+    * Bila menghubungkan beberapa file CSS, download time dapat bertambah 
+
+### Tag HTML5 
+* `<!--...-->` : membuat comment
+* `<a>` : membuat anchor
+* `<article>` : membuat bagian konten dalam dokumen (artikel)
+* `<body>` : membuat elemen body
+* `<br>` : menambah line break
+* `<button>` : membuat button
+* `<div>` : membuat sebuah section dalam dokumen
+* `<b>` : membuat text menjadi bold
+* `<i>` : membuat text menjadi italic
+* `<small>` : membuat text menjadi kecil
+* `<big>` : membuat text menjadi besar
+* `<form>` : membuat form
+* `<head>` : memberi informasi mengenai dokumen
+* `<header>` : membuat header
+* `<footer>` : membuat footer
+* `<html>` : membuat dokumen html
+* `<input>` : membuat input field
+* `<label>` : membuat label untuk form control
+* `<li>` : membuat list item
+* `<ol>` : membuat ordered list
+* `<ul>` : membuat unordered list
+* `<p>` : membuat paragraf
+* `<code>` : menambahkan kode dalam bentuk text
+* `<table>` : membuat tabel
+* `<td>` : membuat cell tabel
+* `<th>` : membuat header tabel
+* `<tr>` : membuat row tabel
+* `<textarea>` : membuat text area
+* `<h1> - <h6>` : membuat heading 
+
+### Tipe-tipe CSS selector
+* `*` : memilih semua elemen pada halaman
+* `#X` : memilih elemen berdasarkan id
+* `.X` : memilih elemen berdasarkan class
+* `X` : memilih elemen berdasarkan nama
+
+### Implementasi
+* Menambahkan stylesheet bootstrap pada `base.html`
+* Menambahkan class dan stylenya dalam `style.css`
+* Mengimplementasikan class dari `style.css` dan menambahkan atribut lain pada html
+
+### Bonus
+* Menambahkan class `.card:hover` untuk membuat efek pada cards
