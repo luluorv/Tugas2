@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(180deg, rgb(224, 143, 143) 0%, rgb(132, 132, 132) 96%) no-repeat fixed;
+}
+
+form {
+    padding: 20px;
+}
+
+.login,
+.create_task {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 25%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+}
+
+
+
+

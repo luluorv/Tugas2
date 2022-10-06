@@ -2,34 +2,50 @@
 
 {% block content %}
 
-<h1>Tugas 4 Assignment PBP/PBD</h1>
+<body>
+    <nav class="navbar" style="margin: 10px">
+        <div>
+            <h1>Tugas 4 Assignment PBP/PBD</h1>
+            <h5>Hello, {{user}}!</h5>
+        </div>
+        <a class="btn btn-lg btn-primary btn-block" href="{% url 'todolist:logout' %}" >Logout</a>
+    
+    </nav>
+    
+    <nav class="navbar" style="margin-left: 10px; margin-right: 10px;">
+        <a class="btn btn-lg btn-primary btn-block" href="{%url 'todolist:create_task' %}">New Task</a>    
+    </nav>
+    
+    <div class="container" style="max-width: 1000px">
+        {% for thing in todolist %}
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">{{thing.date}}</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title">{{thing.title}}</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>{{thing.description}}</li>
+                </ul>
+                <div>
+                    {% if thing.is_finished %} 
+                    <a class="btn btn-success"  href="{% url 'todolist:change_status' thing.id %}">Selesai</a>
+                    {% else %}
+                    <a class="btn btn-success" href="{% url 'todolist:change_status' thing.id %}">Belum Selesai</a>
+                    {% endif %}
+                    <a class="btn btn-danger" href="{% url 'todolist:delete_task' thing.id %}">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+    
+</body>
 
-<h5>Username: {{user}}</h5>
 
-<table>
-    <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Status</th>
-    <th>Change Status</th>
-    <th>Delete Task</th>
-    </tr>
-    {% for thing in todolist %}
-        <tr>
-            <td>{{thing.date}}</td>
-            <td>{{thing.title}}</td>
-            <td>{{thing.description}}</td>
-            {% if thing.is_finished %} <td>Selesai</td> {% else %} <td>Belum Selesai</td> {% endif %}
 
-            <td><button><a href="{% url 'todolist:change_status' thing.id %}">Change Status</a></button></td>
-            <td><button><a href="{% url 'todolist:delete_task' thing.id %}">Delete Task</button></td>
-        </tr>
-    {% endfor %}    
-</table>
 
-<button><a href="{%url 'todolist:create_task' %}">New Task</a></button>
-
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 
 {% endblock content %}
