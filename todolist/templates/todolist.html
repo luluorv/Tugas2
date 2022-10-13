@@ -12,9 +12,46 @@
     
     </nav>
     
-    <nav class="navbar" style="margin-left: 10px; margin-right: 10px;">
+    <!-- <nav class="navbar" style="margin-left: 10px; margin-right: 10px;">
         <a class="btn btn-lg btn-primary btn-block" href="{%url 'todolist:create_task' %}">New Task</a>    
-    </nav>
+    </nav> -->
+
+    <div class="modal fade" id="new-task" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              {% csrf_token %}
+
+              <div class="mb-3">
+                <label for="title" class="col-form-label">Title:</label>
+                <input type="text" name="title" id="title"  class="form-control" placeholder="Do something" required="">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="col-form-label">Description:</label>
+                <textarea name="description" id="description" class="form-control" placeholder="..." required=""></textarea>
+              </div>
+      
+              <div class="d-grid mt-4">
+                  <input class="btn-add-task btn btn-outline-primary" type="submit" value="Add Task" data-bs-dismiss="modal"/>
+              </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar" style="margin-left: 10px; margin-right: 10px;">
+      <a class="btn btn-primary align-middle" data-bs-toggle="modal" data-bs-target="#new-task">Create Task</a>   
+  </nav>
     
     <div class="container" style="max-width: 1000px">
         {% for thing in todolist %}
@@ -41,11 +78,30 @@
           </div>
         {% endfor %}
     </div>
-    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  $(document).on('submit', '#new-task', function(e) {
+    e.preventDefault();
+    $.ajax({
+      type:'POST',
+      url:'create-task/',
+      data:{
+        title:$('#title').val(),
+        description:$('#description').val(),
+        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+      },
+      success: function() {
+        
+      }
+      
+    })
+  })
+  
+</script>
+
 </body>
-
-
-
-
 
 {% endblock content %}

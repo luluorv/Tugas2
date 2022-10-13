@@ -6,8 +6,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseNotFound
 from django.urls import reverse
+from django.core import serializers
 
 from todolist.models import Task
 from todolist import forms
@@ -79,3 +80,23 @@ def delete_task(request, id):
     task = Task.objects.get(user=user, pk=id)
     task.delete()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
+def show_json(request):
+    user = User.objects.get(username=request.user)
+    tasks = Task.objects.filter(user=user)
+    return HttpResponse(serializers.serialize("json", tasks), content_type="application/json")
+
+
+def add_todolist_item(request):
+    if request.method == 'POST':
+        user = User.objects.get(username=request.user)
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+
+        task = Task(user=user, title=title, description=description)
+        task.save()
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()
+
